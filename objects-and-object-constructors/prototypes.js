@@ -18,8 +18,9 @@ Player.prototype.scoreIs = function(){
     return ("the player score is " + this.score);
 }
 
-let ander = new Player("Anderson", 21);
+let ander = new Player("Anderson", 211);
 
 Object.setPrototypeOf(Player.prototype, Person.prototype);
 
 console.log(ander.introduceYourself())
+console.log(ander.scoreIs())
