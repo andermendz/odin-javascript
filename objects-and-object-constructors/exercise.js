@@ -17,4 +17,13 @@ function book(title, author, numPages, readStatus){
 
 let book1 = new book("test book ", "Me", 325, "Read");
 
-console.log(book1.info());
+book.prototype.isDigital = function(){
+    return "Available on digital"
+}
+let book2 = new book("test book ", "other dude", 34, "not Read");
+
+
+// console.log(book1.info());
+// console.log(book1.isDigital());
+// console.log(book2.isDigital());
+
