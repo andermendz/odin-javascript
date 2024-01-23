@@ -1,18 +1,19 @@
-// let person = {
-//     name: 'John',
-//     surname: 'Doe',
-
-//     get personFullName(){
-//         return `${this.name}  ${this.surname}` ;
-//     },
-
-//     set personFullName(value){
-//         [this.name, this.surname] = value.split(' ');
-
-//     }
-// }
+function person(name,surname)  {
+    this.name = name,
+    this.surname = surname,
 
 
-// person.personFullName = 'Anderson Mendoza';
+    Object.defineProperty(this, 'fullName', {
+        get() {
+            return `${this.name} ${this.surname}`;
+        }, 
+        set(value){
+            [this.name, this.surname] = value.split(' ');
+        }
+    });
+}
 
-// alert(person.name + ' ' + person.surname)
+
+let Anderson = new person('Anderson','Mendoza');
+
+alert(Anderson.fullName)
